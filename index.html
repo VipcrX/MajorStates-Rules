@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🇩🇪MajorStates Roleplay EH - Regelwerk</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            line-height: 1.8;
+            user-select: none; 
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 4px solid #484649;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            color: #0c7199;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+            background: rgba(30, 30, 30, 0.7);
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        header p {
+            color: #706a6a;
+            font-size: 1.2em;
+            position: relative;
+            z-index: 2;
+            background: rgba(30, 30, 30, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://cdn.discordapp.com/attachments/1345028534824865903/1345042922453602345/static_2.png?ex=67c31c56&is=67c1cad6&hm=4d09b9d4ffba402ce636efeaf5f0a303c51c1128ce990be27009f814692819e0&') center/cover no-repeat;
+            opacity: 0.5;
+            z-index: 1;
+            filter: blur(2px);
+            
+        }
+
+        nav {
+            background-color: #2a2a2a;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background-color: #3a3a3a;
+            font-size: 1.1em;
+        }
+
+        .nav-links a:hover {
+            background-color: #1c9eda;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .discord-button {
+            background-color: #7289DA;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+        }
+
+        .discord-button:hover {
+            background-color: #677bc4;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        section {
+            background-color: #2a2a2a;
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: #1c9eda;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #484649;
+            padding-bottom: 10px;
+            font-size: 1.8em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .rule-category {
+            margin-bottom: 30px;
+        }
+
+        ol {
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 15px;
+            padding: 12px;
+            background-color: #3a3a3a;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+        }
+
+        li:hover {
+            background-color: #2b2b2b;
+            transform: translateX(10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2a2a2a;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 4px solid #484649;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        footer p {
+            color: #b0b0b0;
+            font-size: 1em;
+        }
+
+        .collapsible {
+            background-color: #3a3a3a;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.1em;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .active, .collapsible:hover {
+            background-color: #02162c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(5, 79, 139, 0.2);
+        }
+
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: #333;
+            border-radius: 0 0 5px 5px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-links a {
+                padding: 10px 15px;
+                font-size: 1em;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            li {
+                padding: 10px;
+                font-size: 1em;
+            }
+
+            .discord-button {
+                padding: 10px 15px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+    <header>
+        <div class="container">
+            <h1>MajorStates Roleplay EH</h1>
+            <p>Offizielles Regelwerk für unseren Roleplay-Server</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="nav-links">
+                <a href="#allgemein">Allgemeine Regeln</a>
+                <a href="#global">Globale Regeln</a>
+                <a href="#roleplay">Roleplay-Regeln</a>
+                <a href="#frakzion">Fraktionen</a>
+                <a href="#whitelist">Whitelist</a>
+                <a href="https://discord.gg/major-states" class="discord-button">Discord Server</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="allgemein">
+            <h2>Allgemeine Regeln</h2>
+            <div class="rule-category">
+                <button class="collapsible">Grundregeln</button>
+                <div class="content">
+                    <ol>
+                        <li>Respekt und Freundlichkeit</li>
+                        <li>Kein Spam</li>
+                        <li>Keine unangemessenen Inhalte</li>
+                        <li>Passende Nutzung der Kanäle</li>
+                        <li>Keine unerlaubte Werbung</li>
+                        <li>Datenschutz wahren</li>
+                        <li>Moderatorenentscheidungen achten</li>
+                        <li>Keine illegalen Inhalte oder Aktivitäten</li>
+                        <li>Streitigkeiten privat klären</li>
+                        <li>Server-Sprache</li>
+                        <li>Benutzername und Profilbild</li>
+                        <li>Regelverstöße melden</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="global">
+            <h2>Globale Regeln</h2>
+            <div class="rule-category">
+                <button class="collapsible">Globale Richtlinien</button>
+                <div class="content">
+                    <ol>
+                        <li>Mindestalter</li>
+                        <li>Eigenverantwortung der Mitglieder</li>
+                        <li>Urheberrechte beachten</li>
+                        <li>Haftungsausschluss</li>
+                        <li>Keine illegalen Inhalte</li>
+                        <li>Privatsphäre schützen</li>
+                        <li>Discord-Richtlinien einhalten</li>
+                        <li>Verantwortung für Inhalte</li>
+                        <li>Legitime Servernutzung</li>
+                        <li>Änderungen der Regeln</li>
+                        <li>Konsequenzen bei Verstößen</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="roleplay">
+            <h2>Roleplay-Regeln</h2>
+            <div class="rule-category">
+                <button class="collapsible">Roleplay-Grundlagen</button>
+                <div class="content">
+                    <ol>
+                        <li>Trennung von IC und OOC</li>
+                        <li>Kein Power-Gaming</li>
+                        <li>Realistische Charakterdarstellung</li>
+                        <li>Fear-RP beachten</li>
+                        <li>New Life Rule (NLR)</li>
+                        <li>Logik bei kriminellen Handlungen</li>
+                        <li>ERP nur mit Zustimmung</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="frakzion">
+            <h2>Fraktionen</h2>
+            <div class="rule-category">
+                <button class="collapsible">Fraktionen-Regeln</button>
+                <div class="content">
+                    <ol>
+                        <li>Fraktionen müssen realistisch und nachvollziehbar sein.</li>
+                        <li>Jede Fraktion benötigt eine klare Hierarchie und Struktur.</li>
+                        <li>Interne Konflikte müssen im RP ausgetragen werden.</li>
+                        <li>Fraktionen dürfen keine übernatürlichen oder unrealistischen Fähigkeiten haben.</li>
+                        <li>Die Gründung einer Fraktion erfordert die Genehmigung der Serverleitung.</li>
+                        <li>Fraktionen müssen regelmäßig aktiv sein, um bestehen zu bleiben.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="whitelist">
+            <h2>Whitelist und Charaktererstellung</h2>
+            <div class="rule-category">
+                <button class="collapsible">Whitelist-Regeln</button>
+                <div class="content">
+                    <ol>
+                        <li>Whitelist-Pflicht</li>
+                        <li>Charakterlimit</li>
+                        <li>Glaubwürdige Hintergrundgeschichten</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 🇩🇪MajorStates Roleplay EH. Alle Rechte vorbehalten. by Nojo :)</p>
+    </footer>
+
+    <script>
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('selectstart', function (e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('dragstart', function (e) {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+            }
+        });
+
+        const coll = document.getElementsByClassName("collapsible");
+        for (let i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                const content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
