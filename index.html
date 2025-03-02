@@ -124,7 +124,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        /* Sektionen */
+
         section {
             background-color: #2a2a2a;
             margin: 20px 0;
@@ -165,7 +165,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        /* Footer */
+
         footer {
             background-color: #2a2a2a;
             text-align: center;
@@ -180,7 +180,7 @@
             font-size: 1em;
         }
 
-        /* Collapsible Sections */
+
         .collapsible {
             background-color: #3a3a3a;
             color: rgb(255, 255, 255);
@@ -211,7 +211,7 @@
             border-radius: 0 0 5px 5px;
         }
 
-        /* Responsive Design */
+
         @media (max-width: 768px) {
             .nav-links {
                 gap: 15px;
@@ -364,24 +364,24 @@
     </footer>
 
     <script>
-        // Verhindert Rechtsklick
+
         document.addEventListener('contextmenu', function (e) {
             e.preventDefault();
         });
 
-        // Verhindert Textauswahl
+
         document.addEventListener('selectstart', function (e) {
             e.preventDefault();
         });
 
-        // Verhindert Drag & Drop von Bildern
+
         document.addEventListener('dragstart', function (e) {
             if (e.target.tagName === 'IMG') {
                 e.preventDefault();
             }
         });
 
-        // Collapsible Funktionalität
+
         const coll = document.getElementsByClassName("collapsible");
         for (let i = 0; i < coll.length; i++) {
             coll[i].addEventListener("click", function() {
@@ -395,7 +395,7 @@
             });
         }
 
-        // Smooth Scroll für Nav-Links
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -405,7 +405,7 @@
             });
         });
 
-        // Dynamische Hervorhebung der aktiven Section
+
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.nav-links a');
 
